@@ -1,0 +1,97 @@
+{
+  "random_state_split": 42,
+  "random_state_etl": 42,
+  "random_state_search": 15,
+  "n_iter": 5,
+  "cv": 5,
+  "cost_fn": 10000.0,
+  "cost_fp": 500.0,
+  "target_pos_rate_test": 0.2,
+  "train_columns": [
+    "dance_disaster_rating",
+    "ticklish_level",
+    "eyesight",
+    "age",
+    "number_of_policies",
+    "fire_power_level",
+    "soda_likeness_rate",
+    "snack_obsession",
+    "creature_cost",
+    "hearing_score",
+    "rage_outburst_score",
+    "burp_burn_index",
+    "owl_ratio",
+    "grandma_boogie_index",
+    "creature_type_Dragon",
+    "creature_type_Griffin",
+    "creature_type_Unicorn",
+    "creature_type_Yeti",
+    "flight_status_Yes"
+  ],
+  "models": [
+    {
+      "name": "model_a",
+      "scoring_optimised": "f1",
+      "best_cv_score": 0.7353728360427803,
+      "train_score": 0.7575464863559527,
+      "test_original_score": 0.7295990901336367,
+      "test_shifted_score": 0.7321783584209032,
+      "delta_train_minus_test_shifted": 0.0253681279350495,
+      "tn_shifted": 1348,
+      "fp_shifted": 459,
+      "fn_shifted": 484,
+      "tp_shifted": 1289,
+      "total_cost_shifted": 5069500.0,
+      "cost_per_1000_shifted": 5069.5,
+      "best_params": {
+        "model__n_estimators": 174,
+        "model__min_samples_split": 32,
+        "model__min_samples_leaf": 58,
+        "model__max_depth": 9
+      },
+      "model_path": "saved_models/model_a.joblib"
+    },
+    {
+      "name": "model_b",
+      "scoring_optimised": "f1",
+      "best_cv_score": 0.7267344106800476,
+      "train_score": 0.751518095700753,
+      "test_original_score": 0.7219343696027634,
+      "test_shifted_score": 0.724762726488352,
+      "delta_train_minus_test_shifted": 0.02675536921240096,
+      "tn_shifted": 1363,
+      "fp_shifted": 444,
+      "fn_shifted": 513,
+      "tp_shifted": 1260,
+      "total_cost_shifted": 5352000.0,
+      "cost_per_1000_shifted": 5352.0,
+      "best_params": {
+        "model__min_samples_split": 29,
+        "model__min_samples_leaf": 63,
+        "model__max_depth": 9
+      },
+      "model_path": "saved_models/model_b.joblib"
+    },
+    {
+      "name": "model_c",
+      "scoring_optimised": "precision",
+      "best_cv_score": 0.7583648332185009,
+      "train_score": 0.7583176396735719,
+      "test_original_score": 0.7523949889462048,
+      "test_shifted_score": 0.7523949889462048,
+      "delta_train_minus_test_shifted": 0.005922650727367085,
+      "tn_shifted": 1471,
+      "fp_shifted": 336,
+      "fn_shifted": 752,
+      "tp_shifted": 1021,
+      "total_cost_shifted": 7688000.0,
+      "cost_per_1000_shifted": 7688.0,
+      "best_params": {
+        "model__min_samples_split": 31,
+        "model__min_samples_leaf": 37,
+        "model__max_depth": 1
+      },
+      "model_path": "saved_models/model_c.joblib"
+    }
+  ]
+}
